@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" 
+href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap" rel="stylesheet">
+<style>
+#header {
+	text-align: top;
+	text-align: center;
+}
+.dropdown {
+	display: inline-block;
+	position: relative;
+}
+.dropbtn {
+	color: black;
+	background-color: solid green;
+	border: none;
+	font-size: 20px;
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	<!--width: 100%;-->
+	overflow: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	background-color: #FFFFFF;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+.dropdown-content a {
+	display: block;
+	color: black;
+	padding: 5px;
+	text-decoration: none;
+}
+.dropdown-content a:hover {
+	color: #FFFFFF;
+	background-color: #00A4BD
+}
+.img {
+	float: left;
+	margin: 0 20px 20px 0;
+}
+.p {
+	text-align: justify;
+	text-indent: 2em;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap');
+.fonth1 {
+	font-family: 'Mystery Quest', cursive;
+	font-size: 100px;
+	line-height: 0px;
+}
+.fonth2 {
+	font-family: 'Mystery Quest', cursive;
+}
+
+#myImg {
+	float: left;
+	margin: 0 20px 20px 0;
+	cursor: pointer;
+	transition: 0.3s;
+}
+#myImg:hover {opacity: 0.7;}
+
+#img {
+	cursor: pointer;
+	transition: 0.3s;
+}
+#img:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body bgcolor=b5e0f0>
+
+<div class="dropdown">
+	<button class="dropbtn">=</button>
+	<div class="dropdown-content">
+	<a href="Portfolio.html">Portfolio</a>
+	<a href="GRAF02.html">GRAF02</a>
+	<a href="VAL01.html">VAL01</a>
+	</div>
+</div>
+
+<h1 id="header" class="fonth1">Kuivaneula ja etsaus</h1>
+
+<img id="myImg" class="img" src="KjaEhyvavierekkain.jpg" alt="Kuoleman tie" 
+style="width:575.5px;height:451px;">
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+
+<p class="p"><h2 class="fonth2">Kuoleman tie</h2><b>Itsearviointi:</b>
+<br>Tämän työn idea oli matkalainen, toukka, joka on matkallaan kuolleen ruumiksen
+luo, mätänemisprosessin edistämiseksi. Jalanjäljet tuovat oikukkaan tulkinnan vakavaan aiheeseen 
+ja korostavat matkan aihetta. Inspiroiduin Harry Potterin Kelmien kartasta. 
+<br><br>Mielestäni idea oli todella hyvä, mutta toteutus olisi voinut olla parempi. 
+En oikein miettinyt miltä kuivaneula ja etsaus laatat näyttäisivät päällekäin vedostettuna, 
+katsoin niitä vain yksilöinä. Olisin esimerkiksi voinut jättää kädestä ne linjat pois, minne 
+toukka tulisi vedostuksessa päälle. Jos nyt vedostaa kummatkin laatat päällekäin, 
+lopputulos näyttää ainakin minusta liian sekavalta. Osittain päällekkyys toimii mielestäni parhaiten.</p>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<img src="KjaEylhaalla.jpg" alt="Kuoleman tie 2" 
+style="width:275px;height:318px;">
+<img src="KjaEyhdessa.jpg" alt="Kuoleman tie 3" 
+style="width:315px;height:318px;">  
+<img src="KjaEvierekkain.jpg" alt="Kuoleman tie 4" 
+style="width:495px;height:318px;">
+<img src="KjaEyleisnakyma.jpg" alt="Kuoleman tie 5" 
+style="width:598px;height:263px;">
+
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+</body>
+</html>
