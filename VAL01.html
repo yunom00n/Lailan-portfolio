@@ -2,7 +2,19 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" 
+href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap" rel="stylesheet">
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap');
+.fonth1 {
+	font-family: 'Mystery Quest', cursive;
+	font-size: 100px;
+	line-height: 0px;
+}
+.fonth2 {
+	font-family: 'Mystery Quest', cursive;
+	font-size: 50px;
+}
 .dropdown {
 	display: inline-block;
 	position: relative;
@@ -86,7 +98,177 @@ div.desc {
   padding: 15px;
   text-align: center;
 }
+
+
+
+.row1 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column1 {
+  flex: 23%;
+  max-width: 23%;
+  padding: 0 4px;
+}
+
+.column1 img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column1 {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column1 {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+ /* width: 25%; */
+ cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+  max-height: 600px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+  background-color: black;
+  max-width:100%;
+  max-height:600px;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 </style>
+<title>VAL01</title>
 </head>
 <body bgcolor=b5e0f0>
 
@@ -98,258 +280,743 @@ div.desc {
 	</div>
 </div>
 
-<center><h1>VAL01</h1></center>
-<p>Tänne tulee vielä asiaa</p>
+<center><h1 class="fonth1">VAL01</h1>
+<h2 class="fonth2">Valokuvauksen perusteet filmillä</h2></center> 
 
 <button class="collapsible">Pienoisesitelmä (valo, tila, aika)</button>
 <div class="collcontent">
-	<p>VALO</p>
-	<div> <div style="float: left"> <img src="imogencunningham.png" alt="Tekla Wurlitzer" style="width:300px;height:319px">
+	
+	<div class="row" style="width:50%;float:left" > <p><b>VALO</b></p> <div style="float: left"> <img src="imogencunningham.png" alt="Tekla Wurlitzer" style="width:300px;height:319px">
 	</div> <div class="text"> <a href="https://www.imogencunningham.com/artworks/categories/68/2342-cunningham-tekla-wurlitzer-1955/">Cunningham, Tekla Wurlitzer, 1955 | Imogen Cunningham Official Site</a>
 	<p>Muotokuva on kuvattu lasin läpi, jossa on melkein pystysuorat viivat. Epäsuora, pehmeä, useita kertoja taittunut valo, joka vääristelee kasvoja ja ympäristöä lasin linjojen kohdalla, luo uuden kiinnostavan näkökulman ihmisen kasvoihin.
 	<br>Myös tila, erityisesti yläkulma on tärkeä tähän työhön.
 	</p> </div> </div>
-	<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 	
-	<p>TILA</p>
-	<div> <div style="float: left"> <img class="img" src="anseladams.png" alt="Rock and Tar" style="width:300px;height:312px">
+	<div class="row" style="width:50%;float:left"> <p><b>TILA</b></p> <div style="float: left"> <img class="img" src="anseladams.png" alt="Rock and Tar" style="width:300px;height:312px">
 	</div> <div class="text"> <a href="http://www.artnet.com/artists/ansel-adams/rock-and-tar-pt-lobos-sUsM8vpu7S-xQKXaZw-5kw2">Rock and Tar, Pt. Lobos by Ansel Adams on artnet</a>
 	<p>Rajaus ja etäisyys ovat tälle kuvalle olennaisia. Kivi on kuvattu erittäin läheltä ja kuva on rajattu niin, että nähdään sekä kiinnostavan kiven kierrekuvion, että alas juoksevan tervan. Nämä voisi tavallaan myös nähdä rinnastuksena.
 	</p>
 	</div> </div>
-	<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 	
-	<p>AIKA/HETKI</p>
-	<img class="img" src="carldekeyzer.png" alt="Nimetön" style="width:300px;height:240px">
-	<a href="https://www.magnumphotos.com/photographer/carl-de-keyzer/">Carl De Keyzer • Photographer Profiles • Magnum Photos</a>
-	<br>
+	<div class="row" style="width:50%;float:left"> <p><b>AIKA/HETKI</b></p> <div style="float: left"> <img class="img" src="carldekeyzer.png" alt="Nimetön" style="width:300px;height:240px">
+	</div> <div class="text"> <a href="https://www.magnumphotos.com/photographer/carl-de-keyzer/">Carl De Keyzer • Photographer Profiles • Magnum Photos</a>
+	<p>Tämä kuva ei olisi voinut muodostua samalla tavalla toisessa hetkessä: auto olisi toisessa kohdassa, aallot eivät murtuisi, eivätkä ihmisest katsoisi ja vilkuttelisi samalla tavalla. Kuvaan syntyy kiinnostava liike, koska kamera liikkui auton kanssa - se on terävänä, mutta tausta on epäselvä.
+	</p>
+	</div> </div>
+
+	<div class="row" style="width:50%;float:left"> <p><b>RINNASTUS</b></p> <div style="float: left"> <img class="img" src="robertdoisneau.png" alt="Les tabliers de la rue de Rivoli" style="width:300px;height:201px">
+	</div> <div class="text"> <a href="https://www.robert-doisneau.com/en/portfolios/474,enfants.htm">Atelier Robert Doisneau | Robert Doisneau’s photo archives. - Children (robert-doisneau.com)</a>
+	<p>Elementti, joka tekee tästä kuvasta kiinnostavan on elävien lasten ja elottomien teräslohkareiden, eli autojen, rinnastus. Katu on tehty autoille, mutta nyt sen yli marssii jono lapsia - autojen on pysähdyttävä.<br>Tila, etenkin symmetria, on tälle kuvalle myös olennainen.
+	</p>
+	</div> </div>
+
+	<div class="row" style="width:50%;position:relative"> <p><b>TOISTO</b></p> <div style="float: left"> <img class="img" src="andrekertesz.png" alt="Place Gambetta" style="width:300px;height:376px">
+	</div> <div class="text"> <a href="http://www.artnet.com/artists/andr%C3%A9-kert%C3%A9sz/place-gambetta-paris-a-na5_1o6CwSRkmtb08HNI8A2">Place Gambetta, Paris by André Kertész on artnet</a>
+	<p> Katulyhtyjen toisto, sekä niiden diagonaalinen asettelu kuvan yli, muodostavat tämän kuvan olemuksen. Toistosta poikkeava viimeinen lyhty, jossa on 3 lamppua, sekä kävelevä ihminen, kaappaavat katsojan kiinnostuksen. Kuvan rajaus on myös erittäin tärkeä tässä.
+	</p>
+	</div> </div>
 	
-	<p>RINNASTUS</p>
-	<img class="img" src="robertdoisneau.png" alt="Les tabliers de la rue de Rivoli" style="width:300px;height:201px">
-	<a href="https://www.robert-doisneau.com/en/portfolios/474,enfants.htm">Atelier Robert Doisneau | Robert Doisneau’s photo archives. - Children (robert-doisneau.com)</a>
-	<br>
-	
-	<p>TOISTO</p>
-	<img class="img" src="andrekertesz.png" alt="Place Gambetta" style="width:300px;height:376px">
-	<a href="http://www.artnet.com/artists/andr%C3%A9-kert%C3%A9sz/place-gambetta-paris-a-na5_1o6CwSRkmtb08HNI8A2">Place Gambetta, Paris by André Kertész on artnet</a>
-	
+
 </div>
+
+
 
 <button class="collapsible">Valo, tila, aika -kuvaustehtävä</button>
 <div class="collcontent">
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailanfilmi.jpg">
-    <img src="filmi1/lailanfilmi.jpg" width="600" height="396">
-	</a>
+
+		<!-- Images used to open the lightbox -->
+	<div class="row">
+		<div class="row"><p><b>VALO</b></p>
+			<div class="column">
+			<img src="filmi1/lailanfilmi0004.jpg" width="225" height="148.5" onclick="openModal();currentSlide(1)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailanfilmi0012.jpg" width="225" height="148.5" onclick="openModal();currentSlide(2)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailantokafilmi0006.jpg" width="225" height="148.5" onclick="openModal();currentSlide(3)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailantokafilmi0007.jpg" width="225" height="148.5" onclick="openModal();currentSlide(4)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailantokafilmi0017.jpg" width="225" height="148.5" onclick="openModal();currentSlide(5)" class="hover-shadow">
+			</div>
+		</div>
+		
+		
+		<div class="row"><p><b>TILA</b></p>
+			<div class="column">
+			<img src="filmi1/lailanfilmi0002.jpg" width="225" height="148.5" onclick="openModal();currentSlide(6)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailanfilmi0009.jpg" width="225" height="148.5" onclick="openModal();currentSlide(7)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailantokafilmi.jpg" width="225" height="148.5" onclick="openModal();currentSlide(8)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailantokafilmi0001.jpg" width="225" height="148.5" onclick="openModal();currentSlide(9)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailantokafilmi0003.jpg" width="225" height="148.5" onclick="openModal();currentSlide(10)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailantokafilmi0004.jpg" width="225" height="148.5" onclick="openModal();currentSlide(11)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailantokafilmi0005.jpg" width="225" height="148.5" onclick="openModal();currentSlide(12)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailantokafilmi0011.jpg" width="225" height="148.5" onclick="openModal();currentSlide(13)" class="hover-shadow">
+			</div>
+		</div>
+		
+		
+		<div class="row"><p><b>AIKA/HETKI</b></p>
+			<div class="column">
+			<img src="filmi1/lailanfilmi.jpg" width="225" height="148.5" onclick="openModal();currentSlide(14)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailanfilmi0005.jpg" width="225" height="148.5" onclick="openModal();currentSlide(15)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailanfilmi0006.jpg" width="225" height="148.5" onclick="openModal();currentSlide(16)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailanfilmi0007.jpg" width="225" height="148.5" onclick="openModal();currentSlide(17)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailanfilmi0008.jpg" width="225" height="148.5" onclick="openModal();currentSlide(18)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailanfilmi0010.jpg" width="225" height="148.5" onclick="openModal();currentSlide(19)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailanfilmi0014.jpg" width="225" height="148.5" onclick="openModal();currentSlide(20)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailanfilmi0015.jpg" width="225" height="148.5" onclick="openModal();currentSlide(21)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailantokafilmi0013.jpg" width="225" height="148.5" onclick="openModal();currentSlide(22)" class="hover-shadow">
+			</div>
+		</div>
+		
+		
+		<div class="row"><p><b>RINNASTUS</b></p> 
+			<div class="column">
+			<img src="filmi1/lailanfilmi0013.jpg" width="225" height="148.5" onclick="openModal();currentSlide(23)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailantokafilmi0002.jpg" width="225" height="148.5" onclick="openModal();currentSlide(24)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailantokafilmi0008.jpg" width="225" height="148.5" onclick="openModal();currentSlide(25)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailantokafilmi0012.jpg" width="225" height="148.5" onclick="openModal();currentSlide(26)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailantokafilmi0014.jpg" width="225" height="148.5" onclick="openModal();currentSlide(27)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailantokafilmi0015.jpg" width="225" height="148.5" onclick="openModal();currentSlide(28)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailantokafilmi0016.jpg" width="225" height="148.5" onclick="openModal();currentSlide(29)" class="hover-shadow">
+			</div>
+		</div>
+		
+		
+		<div class="row"><p><b>TOISTO</b></p> 
+			<div class="column">
+			<img src="filmi1/lailanfilmi0001.jpg" width="225" height="148.5" onclick="openModal();currentSlide(30)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailantokafilmi0009.jpg" width="225" height="148.5" onclick="openModal();currentSlide(31)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailantokafilmi0010.jpg" width="225" height="148.5" onclick="openModal();currentSlide(32)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailanfilmi0011.jpg" width="225" height="148.5" onclick="openModal();currentSlide(33)" class="hover-shadow">
+			</div>
+			<div class="column">
+			<img src="filmi1/lailanfilmi0003.jpg" width="225" height="148.5" onclick="openModal();currentSlide(34)" class="hover-shadow">
+			</div>
+		</div>
+		
 	</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailanfilmi0001.jpg">
-    <img src="filmi1/lailanfilmi0001.jpg" width="600" height="396">
-	</a>
-	</div>
+	<!-- The Modal/Lightbox -->
+	<div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailanfilmi0002.jpg">
-    <img src="filmi1/lailanfilmi0002.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">1 / 34</div>
+				<img src="filmi1/lailanfilmi0004.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailanfilmi0003.jpg">
-    <img src="filmi1/lailanfilmi0003.jpg" width="600" height="396">
-	</a>
-	</div>
-	
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailanfilmi0004.jpg">
-    <img src="filmi1/lailanfilmi0004.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">2 / 34</div>
+				<img src="filmi1/lailanfilmi0012.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailanfilmi0005.jpg">
-    <img src="filmi1/lailanfilmi0005.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">3 / 34</div>
+				<img src="filmi1/lailantokafilmi0006.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailanfilmi0006.jpg">
-    <img src="filmi1/lailanfilmi0006.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">4 / 34</div>
+				<img src="filmi1/lailantokafilmi0007.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">5 / 34</div>
+				<img src="filmi1/lailantokafilmi0017.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailanfilmi0007.jpg">
-    <img src="filmi1/lailanfilmi0007.jpg" width="600" height="396">
-	</a>
-	</div>
-	
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailanfilmi0008.jpg">
-    <img src="filmi1/lailanfilmi0008.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">6 / 34</div>
+				<img src="filmi1/lailanfilmi0002.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailanfilmi0009.jpg">
-    <img src="filmi1/lailanfilmi0009.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">7 / 34</div>
+				<img src="filmi1/lailanfilmi0009.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailanfilmi0010.jpg">
-    <img src="filmi1/lailanfilmi0010.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">8 / 34</div>
+				<img src="filmi1/lailantokafilmi.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">9 / 34</div>
+				<img src="filmi1/lailantokafilmi0001.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">10 / 34</div>
+				<img src="filmi1/lailantokafilmi0003.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailanfilmi0011.jpg">
-    <img src="filmi1/lailanfilmi0011.jpg" width="600" height="396">
-	</a>
-	</div>
-	
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailanfilmi0012.jpg">
-    <img src="filmi1/lailanfilmi0012.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">11 / 34</div>
+				<img src="filmi1/lailantokafilmi0004.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailanfilmi0013.jpg">
-    <img src="filmi1/lailanfilmi0013.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">12 / 34</div>
+				<img src="filmi1/lailantokafilmi0005.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">13 / 34</div>
+				<img src="filmi1/lailantokafilmi0011.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailanfilmi0014.jpg">
-    <img src="filmi1/lailanfilmi0014.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">14 / 34</div>
+				<img src="filmi1/lailanfilmi.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailanfilmi0015.jpg">
-    <img src="filmi1/lailanfilmi0015.jpg" width="600" height="396">
-	</a>
-	</div>
-	
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailantokafilmi.jpg">
-    <img src="filmi1/lailantokafilmi.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">15 / 34</div>
+				<img src="filmi1/lailanfilmi0005.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailantokafilmi0001.jpg">
-    <img src="filmi1/lailantokafilmi0001.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">16 / 34</div>
+				<img src="filmi1/lailanfilmi0006.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">17 / 34</div>
+				<img src="filmi1/lailanfilmi0007.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailantokafilmi0002.jpg">
-    <img src="filmi1/lailantokafilmi0002.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">18 / 34</div>
+				<img src="filmi1/lailanfilmi0008.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailantokafilmi0003.jpg">
-    <img src="filmi1/lailantokafilmi0003.jpg" width="600" height="396">
-	</a>
-	</div>
-	
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailantokafilmi0004.jpg">
-    <img src="filmi1/lailantokafilmi0004.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">19 / 34</div>
+				<img src="filmi1/lailanfilmi0010.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailantokafilmi0005.jpg">
-    <img src="filmi1/lailantokafilmi0005.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">20 / 34</div>
+				<img src="filmi1/lailanfilmi0014.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">21 / 34</div>
+				<img src="filmi1/lailanfilmi0015.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailantokafilmi0006.jpg">
-    <img src="filmi1/lailantokafilmi0006.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">22 / 34</div>
+				<img src="filmi1/lailantokafilmi0013.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailantokafilmi0007.jpg">
-    <img src="filmi1/lailantokafilmi0007.jpg" width="600" height="396">
-	</a>
-	</div>
-	
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailantokafilmi0008.jpg">
-    <img src="filmi1/lailantokafilmi0008.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">23 / 34</div>
+				<img src="filmi1/lailanfilmi0013.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailantokafilmi0009.jpg">
-    <img src="filmi1/lailantokafilmi0009.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">24 / 34</div>
+				<img src="filmi1/lailantokafilmi0002.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">25 / 34</div>
+				<img src="filmi1/lailantokafilmi0008.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailantokafilmi0010.jpg">
-    <img src="filmi1/lailantokafilmi0010.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">26 / 34</div>
+				<img src="filmi1/lailantokafilmi0012.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailantokafilmi0011.jpg">
-    <img src="filmi1/lailantokafilmi0011.jpg" width="600" height="396">
-	</a>
-	</div>
-	
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailantokafilmi0012.jpg">
-    <img src="filmi1/lailantokafilmi0012.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">27 / 34</div>
+				<img src="filmi1/lailantokafilmi0014.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailantokafilmi0013.jpg">
-    <img src="filmi1/lailantokafilmi0013.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">28 / 34</div>
+				<img src="filmi1/lailantokafilmi0015.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">29 / 34</div>
+				<img src="filmi1/lailantokafilmi0016.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">30 / 34</div>
+				<img src="filmi1/lailanfilmi0001.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailantokafilmi0014.jpg">
-    <img src="filmi1/lailantokafilmi0014.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">31 / 34</div>
+				<img src="filmi1/lailantokafilmi0009.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailantokafilmi0015.jpg">
-    <img src="filmi1/lailantokafilmi0015.jpg" width="600" height="396">
-	</a>
-	</div>
-	
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailantokafilmi0016.jpg">
-    <img src="filmi1/lailantokafilmi0016.jpg" width="600" height="396">
-	</a>
-	</div>
+			<div class="mySlides">
+				<center><div class="numbertext">32 / 34</div>
+				<img src="filmi1/lailantokafilmi0010.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
 
-	<div class="gallery">
-	<a target="_blank" href="filmi1/lailantokafilmi0017.jpg">
-    <img src="filmi1/lailantokafilmi0017.jpg" width="600" height="396">
-	</a>
+			<div class="mySlides">
+				<center><div class="numbertext">33 / 34</div>
+				<img src="filmi1/lailanfilmi0011.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">34 / 34</div>
+				<img src="filmi1/lailanfilmi0003.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			<div class="mySlides">
+				<center><div class="numbertext">1 / 34</div>
+				<img src="filmit/lailaconstructionyhaus.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">2 / 34</div>
+				<img src="filmit/lailafaces.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">3 / 34</div>
+				<img src="filmit/lailafaces2.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">4 / 34</div>
+				<img src="filmit/lailahand.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">5 / 34</div>
+				<img src="filmit/lailahand2.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">6 / 34</div>
+				<img src="filmit/lailahistoriafilmit1.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">7 / 34</div>
+				<img src="filmit/lailahistoriafilmit10001.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">8 / 34</div>
+				<img src="filmit/lailahistoriafilmit10002.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">9 / 34</div>
+				<img src="filmit/lailahistoriafilmit10003.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">10 / 34</div>
+				<img src="filmit/lailahistoriafilmit10004.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">11 / 34</div>
+				<img src="filmit/lailahistoriafilmit10005.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">12 / 34</div>
+				<img src="filmit/lailahistoriafilmit10006.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">13 / 34</div>
+				<img src="filmit/lailahistoriafilmit10007.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">14 / 34</div>
+				<img src="filmit/lailahistoriafilmit10008.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">15 / 34</div>
+				<img src="filmit/lailahistoriafilmit10009.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">16 / 34</div>
+				<img src="filmit/lailahistoriafilmit10010.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">17 / 34</div>
+				<img src="filmit/lailahistoriafilmit10011.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">18 / 34</div>
+				<img src="filmit/lailahistoriafilmit10012.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">19 / 34</div>
+				<img src="filmit/lailahistoriafilmit10013.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">20 / 34</div>
+				<img src="filmit/lailahistoriafilmit2.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">21 / 34</div>
+				<img src="filmit/lailahistoriafilmit20001.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">22 / 34</div>
+				<img src="filmit/lailahistoriafilmit20002.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">23 / 34</div>
+				<img src="filmit/lailahistoriafilmit20003.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">24 / 34</div>
+				<img src="filmit/lailahistoriafilmit20004.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">25 / 34</div>
+				<img src="filmit/lailahistoriafilmit20005.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">26 / 34</div>
+				<img src="filmit/lailahistoriafilmit20006.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">27 / 34</div>
+				<img src="filmit/lailahistoriafilmit20007.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">28 / 34</div>
+				<img src="filmit/lailahistoriafilmit20008.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">29 / 34</div>
+				<img src="filmit/lailahistoriafilmit20009.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">30 / 34</div>
+				<img src="filmit/lailahistoriafilmit20010.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">31 / 34</div>
+				<img src="filmit/lailahistoriafilmit20011.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">32 / 34</div>
+				<img src="filmit/lailahistoriafilmit20012.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">33 / 34</div>
+				<img src="filmit/lailahistoriafilmit20013.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">34 / 34</div>
+				<img src="filmit/lailahistoriafilmit20014.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">32 / 34</div>
+				<img src="filmit/lailahistoriafilmit20015.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+
+			<div class="mySlides">
+				<center><div class="numbertext">33 / 34</div>
+				<img src="filmit/lailahistoriafilmit3.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">34 / 34</div>
+				<img src="filmit/lailahistoriafilmit30001.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">34 / 34</div>
+				<img src="filmit/lailahistoriafilmit30002.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			<div class="mySlides">
+				<center><div class="numbertext">34 / 34</div>
+				<img src="filmit/lailahistoriafilmit30003.jpg" style="max-width:100%;max-height:600px"></center>
+			</div>
+			
+			<!-- Next/previous controls -->
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			<!-- Caption text -->
+			<div class="caption-container">
+				<p id="caption"></p>
+			</div>
+
+			<!-- Thumbnail image controls 
+			<div class="column">
+				<img class="demo" src="filmi1/lailanfilmi.jpg" width="150" height="99" onclick="currentSlide(1)" alt="Nature">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="filmi1/lailanfilmi0001.jpg" width="150" height="99" onclick="currentSlide(2)" alt="Snow">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="filmi1/lailanfilmi0002.jpg" width="150" height="99" onclick="currentSlide(3)" alt="Mountains">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="filmi1/lailanfilmi0003.jpg" width="150" height="99" onclick="currentSlide(4)" alt="Lights">
+			</div> -->
+		</div>
 	</div>
-  
-  
 </div>
+
+
+
 <button class="collapsible">Historiatehtävä: tutkielma ja kuvat</button>
 <div class="collcontent">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+		<!-- Images used to open the lightbox -->
+	<div class="row">
+	
+		<p>Historiatehtävässä käsittelin Dadaa ja Surrealismia, sekä Konstruktivismiä ja Bauhaus liikettä. <br><br>
+		<b>Dadaistinen ja surrealistinen valokuvaus</b> syntyi 1. maailmansodan jälkeen Saksassa ja Pariisissa. 
+		Taiteilijat alkoivat työskennellä kameran ja progressiivisten tekniikoiden kanssa luodakseen kuvia, 
+		jotka olivat irrallaan valokuvauksen alkuperäisistä käyttötarkoituksista, mm. käyttäen perspektiiviä, kollaasia, valokuvamontaasia ja kuvien jälkikäsittelyä. 
+		<br><br><b>Konstruktivismi</b> oli vaikutusvaltaisin modernin taiteen liike 1900-luvun Venäjällä, jonka myös monet saksalaiset taiteilijat ottivat käyttöön. 
+		Konstruktivismi lainasi elementtejä muista liikkeistä, 
+		erityisesti kubismista ja futurismista, ja sen ytimessä oli ajatus, että taiteentekoa tulisi lähestyä aivojen 'rakennusprosessina'. 
+		Valokuvamontaasi, arkkitehtuuri, materiaali ja geometria vaikuttavat konstruktivismin valokuvateoksiin. <br><br>
+		<b>Bauhaus</b> oli 1900-luvun vaikutusvaltaisin yksittäinen modernistinen taidekoulu. Bauhaus ja sen edeltävät liikkeet pyrkivät tasoittamaan eroa kuvataiteen 
+		ja soveltavan taiteen välillä sekä yhdistämään luovuuden ja tuotannon. <br><br>
+		<b>Dada ja Surrealismi:</b> Inspiroiduin Claude Cahunin omakuvista, jotka käsittelevät sukupuolta ja seksuaalisuutta, mm. teoksesta "What do you want from me?" (1928). 
+		Luin hänen elämästään ja olin yllättynyt siitä, kuinka hänellä oli jo tuolloin samat ajatukset kuin nykypäivän edistyksellisimmillä ihmisillä. Samaan aiheeseen 
+		inspiroiduin André Kertészin "Distortions"-sarjasta (1930-luku). Muutenkin yritin soveltaa surrealistista tyyliä omaan kuviini perspektiivin, ajan ja tilan kautta, jotta tutut 
+		kohteet näyttäisivät uusilta ja oudoilta.
+		<br><br>
+		<b>Konstruktivismi ja Bauhaus:</b> Yksi tärkeimmistä konstruktivismin vaikutteita saaneista taiteilijoista Saksassa oli László Moholy-Nagy, joka oli tullut Unkarista Saksaan, 
+		jossa hän opetti Bauhaus-kouloussa. Itse olen Dessausta, eli Bauhausin kaupungista, niin kuvauskohteita löytyi hyvin kun kävin lomalla kotona, mm. päärakennus (koulu), 
+		ja niin kutsutut mestarien talot. Inspiraationa käytin Moholy-Nagyn teoksia "Photogram" (1926) ja "Funkturm Berlin" (Berlin Radio Tower, 1928-29). 
+		Moholy-Nagyn vaimo Lucia Moholy joutui, kuten monet aikansa naiset, miehensä varjoon, vaikka hänen taide oli yhtä merkittävää. Hänen teoksistaan inspiraationa toimi 
+		"Bauhaus Workshop Building from Below. Oblique View" (1926). Muut inspiraatiot: pysäytyskuva Dziga Vertovin elokuvasta "Man with a Movie Camera" (1929), 
+		El Lissitzkyn "Self-Portrait (The Constructor)" (1924) ja muut Bauhaus-kuvat.
+		<br><br>
+		</p>
+		<div class="row1">
+			<div class="column1">
+				<img src="ClaudeCahun.jpg" style="width:100%">
+				<img src="bauhaus.png"  style="width:100%">
+			</div>
+			<div class="column1">
+				<img src="distortions.jpg" style="width:100%">
+				<img src="manwithamoviecamera.jpg"  style="width:100%">				
+			</div>
+			<div class="column1">
+				<img src="photogram.jpg"  style="width:100%">
+				<img src="theconstructor.jpg"  style="width:100%">				
+			</div>
+			<div class="column1">
+				<img src="funkturmberlin.jpg"  style="width:100%">
+			</div>
+		</div>
+		<br> <p><b>OMAT KUVAT</b></p> 
+	
+		<div class="column">
+			<img src="filmit/lailaconstructionyhaus.jpg" width="225" height="148.5" onclick="openModal();currentSlide(35)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailafaces.jpg" width="225" height="148.5" onclick="openModal();currentSlide(36)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailafaces2.jpg" width="225" height="148.5" onclick="openModal();currentSlide(37)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahand.jpg" width="225" height="148.5" onclick="openModal();currentSlide(38)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahand2.jpg" width="225" height="148.5" onclick="openModal();currentSlide(39)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit1.jpg" width="225" height="148.5" onclick="openModal();currentSlide(40)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit10001.jpg" width="225" height="148.5" onclick="openModal();currentSlide(41)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit10002.jpg" width="225" height="148.5" onclick="openModal();currentSlide(42)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit10003.jpg" width="225" height="148.5" onclick="openModal();currentSlide(43)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit10004.jpg" width="225" height="148.5" onclick="openModal();currentSlide(44)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit10005.jpg" width="225" height="148.5" onclick="openModal();currentSlide(45)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit10006.jpg" width="225" height="148.5" onclick="openModal();currentSlide(46)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit10007.jpg" width="225" height="148.5" onclick="openModal();currentSlide(47)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit10008.jpg" width="225" height="148.5" onclick="openModal();currentSlide(48)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit10009.jpg" width="225" height="148.5" onclick="openModal();currentSlide(49)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit10010.jpg" width="225" height="148.5" onclick="openModal();currentSlide(50)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit10011.jpg" width="225" height="148.5" onclick="openModal();currentSlide(51)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit10012.jpg" width="225" height="148.5" onclick="openModal();currentSlide(52)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit10013.jpg" width="225" height="148.5" onclick="openModal();currentSlide(53)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit2.jpg" width="225" height="148.5" onclick="openModal();currentSlide(54)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit20001.jpg" width="225" height="148.5" onclick="openModal();currentSlide(55)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit20002.jpg" width="225" height="148.5" onclick="openModal();currentSlide(56)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit20003.jpg" width="225" height="148.5" onclick="openModal();currentSlide(57)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit20004.jpg" width="225" height="148.5" onclick="openModal();currentSlide(58)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit20005.jpg" width="225" height="148.5" onclick="openModal();currentSlide(59)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit20006.jpg" width="225" height="148.5" onclick="openModal();currentSlide(60)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit20007.jpg" width="225" height="148.5" onclick="openModal();currentSlide(61)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit20008.jpg" width="225" height="148.5" onclick="openModal();currentSlide(62)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit20009.jpg" width="225" height="148.5" onclick="openModal();currentSlide(63)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit20010.jpg" width="225" height="148.5" onclick="openModal();currentSlide(64)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit20011.jpg" width="225" height="148.5" onclick="openModal();currentSlide(65)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit20012.jpg" width="225" height="148.5" onclick="openModal();currentSlide(66)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit20013.jpg" width="225" height="148.5" onclick="openModal();currentSlide(67)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit20014.jpg" width="225" height="148.5" onclick="openModal();currentSlide(68)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit20015.jpg" width="225" height="148.5" onclick="openModal();currentSlide(69)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit3.jpg" width="225" height="148.5" onclick="openModal();currentSlide(70)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit30001.jpg" width="225" height="148.5" onclick="openModal();currentSlide(71)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit30002.jpg" width="225" height="148.5" onclick="openModal();currentSlide(72)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="filmit/lailahistoriafilmit30003.jpg" width="225" height="148.5" onclick="openModal();currentSlide(73)" class="hover-shadow">
+		</div>
+	</div>
+	
+	
 </div>
+
+
+
 <button class="collapsible">Palaute</button>
 <div class="collcontent">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>VAL01 oli yksi lempikursseistani! En ollut ennen koskaan kuvannut filmille, mutta tämä kurssi herätti kiinnostukseni siihen, minkä takia kuvasinkin jo yhden filmin vapaa-ajallani täyteen. 
+  Tavallaan "vanhanaikainen" työskenteleminen pimiössä on hurmannut minut. On uskomattoman mielenkiintoista olla mukana jokaisessa kuvan muodostamiseen tarvittaessa vaiheessa.
+  Myös valokuvauksen historia kiinnosti minua paljon. Pystyin jo hyödyntää uusia tietojani filosofian estetiikan kurssilla, jota juuri käyn.
+  Aion abivuodelle valita lisää valokuvauskursseja, tai kursseja, jotka hyödyntävät valokuvausta. Huomaan, että voin oppia ja kehittää vielä paljon (esim. kuvan tarkkuus oli minulle usein vaikea säätää hyväksi),
+mutta haluan myös kokeilla kaikenlaista uutta.  <br><br>
+  Harmillisesti tämän kurssin suoritus kesti pitkän ajan kyynärpäävammani takia. 
+  Jos ei kurssia saa heti siinä jaksossa valmiiksi, on vaikea löytää uudessa jaksossa muiden kurssien ohella aikaa. 
+  Sen lisäksi olin kunnianhimoisesti alkanut koodata tätä portfoliota ihan itse käyttäen HTML, CSS ja JavaScriptiä - ei ollut paras ideani (en ole kauhean hyvä tai nopea koodaamaan). 
+  Silti oli kivaa tehdä tämä - vaikka sivu ei ehkä näytä ammatilliselta, pidän siitä, että se on täysin omani, kaikki viat mukaan luettuna. <br> <br>
+  En myöskään saanut tehtyä kaikkea mitä olisin halunnut tehdä: historiatehtävään olin suunnitellut vielä kollaasin, mutta aikaa nyt vaan ei riittänyt. <br><br>
+  Kiitos paljon kivasta ja jännittävästä kurssista ja pahoittelut näin myöhästä palautuksesta!</p>
 </div>
 
 <script>
@@ -366,6 +1033,49 @@ for (i = 0; i < coll.length; i++) {
       content.style.maxHeight = content.scrollHeight + "px";
     } 
   });
+}
+</script>
+
+<script>
+// Open the Modal
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
 }
 </script>
 
